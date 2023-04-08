@@ -1,1 +1,27 @@
 /* dark blue and grey and black theme */
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+div #landing {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+br {
+    margin-bottom: 100px;
+}
