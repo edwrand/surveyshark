@@ -1,6 +1,106 @@
-<!--show the users previous taken or created surveys-->
-<!-- show how much the user has earned or spent-->
-<!-- show the data from created surveys-->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-<!-- show previously taken surveys -->
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .stats-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .stats-box div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stats-box div:first-child {
+            text-align: left;
+        }
+
+        .stats-box div:last-child {
+            text-align: right;
+        }
+
+        .tab {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .tab-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul>
+                <a id='navbar' href="index.html">Home</a>
+                <a id='navbar' href="#">Profile</a>
+                <a></a>
+                <a id='navbar' href="create_survey.html">Create</a>
+                <a></a>
+                <a id='navbar' href="play.html">Play</a>
+                <a></a>
+                <a id='navbar' href="#">Help</a>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <img class="profile-img" src="profile-pic.jpg" alt="Profile Picture">
+        <h1>User Name</h1>
+    </header>
+    <div class="stats-box">
+        <div>Total Wins<br>10</div>
+        <div>Total Money Earned or Given<br>$1000</div>
+        <div>Number contests created<br>5</div>
+    </div>
+    <div class="tab">
+        <h2 class="tab-title">Contests Created</h2>
+        <p>No contests created yet.</p>
+    </div>
+    <div class="tab">
+        <h2 class="tab-title">Contests Played</h2>
+        <p>No contests played yet.</p>
+    </div>
+</body>
+
+</html>

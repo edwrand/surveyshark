@@ -2,3 +2,4 @@ Notes for the project
 
 What is the difference between a log in pop up and a log in page.
 Is it more inefficient to have an extra page for the log in? With the added phone verification?
+
