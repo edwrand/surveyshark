@@ -26,19 +26,63 @@ br {
     margin-bottom: 100px;
 }
 
+
+
+/* nav bar css */
+
 #navbar {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 120px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    background-color: darkslategray;
+    transition: background-color 0.3s ease;
+}
+
+/*  index page css */
+
+#indexh1 {
     color: #ffffff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
-    padding-right: 20px;
-    padding-left: 20px;
+    line-height: 20px;
+    padding: 0;
     margin: 0;
-    width: 50px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 150%;
-    justify-content: space-around;
     text-align: center;
-    background-color: #555;
-    transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
+#indexindent {
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 15px;
+    border: 2px solid #ffffff;
+}
+
+/* css for the survy boxes */
+.box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
+}
+
+.box-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.box-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
