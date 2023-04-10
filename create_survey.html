@@ -74,29 +74,37 @@
 
 <body>
     <div class="container">
+        <h2>Fill this out real quick, please.</h2>
+        <h2>Upon submission your contest will be posted.</h2>
         <form>
             <label for="upload-image">Upload Image:</label>
             <input type="file" id="upload-image" name="upload-image">
 
-            <label for="caption">250 word max caption:</label>
+            <label for="caption">Write a caption (250 words max):</label>
             <input type="text" id="caption" name="caption" maxlength="250">
 
             <label for="time-period">Specify time period available:</label>
             <input type="number" id="time-period" name="time-period" min="10" max="14400"
                 placeholder="Min 10 mins, max 10 days">
 
-            <label for="reward-amount">Specify reward amount:</label>
+            <label for="reward-amount">Specify reward amount ($USD):</label>
             <input type="number" id="reward-amount" name="reward-amount" min="0">
 
             <label for="reward-type">Specify reward type:</label>
             <select id="reward-type" name="reward-type">
                 <option value="winner-takes-all">Winner Takes All</option>
+                <option value="top-3-win">Top 3 Win</option>
                 <option value="top-5-win">Top 5 Win</option>
                 <option value="top-10-win">Top 10 Win</option>
+                <option value="top-25-win">Top 20 Win</option>
+                <option value="top-half-win">Top Half Win</option>
             </select>
+            <label for="num-players">Specify Number of Players Allowed:</label>
+            <input type="number" id="num-players" name="num-players" min="1" max="10000">
 
             <input type="submit" value="Submit">
         </form>
+        <h3 id="indexindent">Clicking submit will begin the count down to the end of your posted contest.</h3>
     </div>
 </body>
 
