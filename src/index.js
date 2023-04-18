@@ -1,8 +1,10 @@
 // Import the functions you need from the SDKs you need
+
+// use the structure below to import firebase services
 // import { } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-SERVICE.js'
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js';
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js';
-// TODO: Add SDKs for Firebase products that you want to use
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-getDatabase.js";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -20,6 +22,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getDatabase();
 
 // detect auth state
 onAuthStateChanged(auth, user => {
