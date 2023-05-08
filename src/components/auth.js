@@ -9,3 +9,13 @@
 // only 1 user can have 1 phone number
 
 // success message that user has been logged in
+
+export const Auth = () => {
+    return (
+        <div>
+            <input>Email</input>
+            <input>Password</input>
+            <button>Sign Up</button>
+        </div>
+    );
+};
