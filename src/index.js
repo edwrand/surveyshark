@@ -4,7 +4,7 @@
 // import { } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-SERVICE.js'
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js';
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js';
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-getDatabase.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -21,14 +21,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase();
 
-// detect auth state
-onAuthStateChanged(auth, user => {
-    if (user != null) {
-        console.log('logged in')
-    } else {
-        console.log('No user logged in')
-    }
+// init servicesconst
+const auth = getAuth(app);
+const db = getFirestore();
+
+// collection ref
+const colRef = collection(db, 'users');
+
+// get collection data
+getDocs(colRef).then((snapshot) => {
+    console.log(snapshot.docs);
 });

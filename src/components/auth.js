@@ -10,12 +10,28 @@
 
 // success message that user has been logged in
 
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 export const Auth = () => {
-    return (
-        <div>
-            <input>Email</input>
-            <input>Password</input>
-            <button>Sign Up</button>
-        </div>
-    );
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const signUp = async () => {
+        await createUserWithEmailAndPassword(auth, email, password)
+
+        return (
+            <div>
+                <input
+                    placeholder='email'
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    placeholder='password'
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button onClick={signUp}>Sign Up</button>
+            </div>
+        );
+    }
 };
